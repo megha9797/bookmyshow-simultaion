@@ -1,2 +1,2 @@
 # bookmyshow-simultaion
-written in HTML, CSS, Bootstrap, Javascript
+written in HTML, CSS, Bootstrap, Javascript,PHP
