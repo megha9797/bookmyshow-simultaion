@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet"  type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+		<link rel="stylesheet" href="../css/index.css">
+		<link rel="stylesheet" href="../css/temp.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">	
+		<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/5499AD75-6740-024E-A269-82C449571FFA/main.js" charset="UTF-8"></script><script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+		
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#"><img src="../img/logo.jpg" width="134" height="50"/></a>
+			</div>	
+			<ul class="nav navbar-nav navbar-right"><button class = 'btn btn-danger' onclick="document.getElementById('id01').style.display='block'" style="width:auto; height:30px; padding:10px">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="../php/login.php" method="post">
+    
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button id = "loginbutton" type="submit">Login</button><br>
+    </div>
+
+    <div class="container" >
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<button onclick="document.getElementById('id02').style.display='block'" class = 'btn btn-danger' style="width:auto; height:30px; padding:10px"><center>Sign Up</center></button>
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="../php/action1_page.php" method="post">
+    <div class="container">
+      <label><b>Username</b></label>
+      <input id = "u" type="text" placeholder="Enter Username" name="username" required>
+	  <label><b>Name</b></label>
+      <input id = "p" type="text" placeholder="Enter Name" name="name" required>
+	  	  
+	  <label><b>Contact</b></label>
+      <input type="text" placeholder="contact" name="contact" required>
+	  
+	  <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn" style="width: 20%">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</ul>
+		</div>
+	</nav>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="../img/20121.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="../img/despicable.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="../img/life.jpg" style="width:100%">
+ 
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="../img/conjuring.jpg" style="width:100%">
+ 
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="../img/gravity.jpg" style="width:100%">
+ 
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+<span class="dot"></span>  
+<span class="dot"></span>
+</div>
+
+   <form id="loginForm" action="../php/login.php" method="post" style="display:none;">
+		<input id="usernameData" type="hidden" name="usernameData"/>
+		<input id="passwordData" type="hidden" name="passwordData"/>
+    </form>
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+	
+}
+
+/*$(document).ready(function(){
+	$("#loginbutton").click(function(){
+		$("$usernameData").val($("$u").val());
+		$("$passwordData").val($("$p").val());
+		$("$loginForm").submit();
+	});
+});*/
+</script>
+<hr>
+</body>
+</html> 

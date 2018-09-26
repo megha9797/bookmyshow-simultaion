@@ -1,0 +1,36 @@
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet"  type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+  <h2>Change Password</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="current_password">Current Password:</label>
+		<input type="password" class="form-control"  name="current_password" value="Current Password"><br>
+    </div>
+	<div class="form-group">
+      <label for="new_password">New Password:</label>
+		<input type="password" name="new_password" class="form-control" value="New Password"><br>
+		
+    </div>
+	<button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+<hr>
+	<div class="container">
+	  <h2>Delete Account</h2>
+	  <form action="/action_page.php">
+			<div class="form-group">
+				<label>Want to delete your account?</label>
+			</div>
+			<button type="submit" class="btn btn-danger">Delete Account</button>
+	   </form>
+	</div>
+</body>
+</html>

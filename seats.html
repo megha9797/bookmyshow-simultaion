@@ -1,0 +1,60 @@
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet"  type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+		<link rel="stylesheet" href="../css/seats.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">	
+		
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+		<script src= "../js/jquery.seat-charts.js"></script>
+		<script src="../js/seats.js"></script>
+	</head>
+	<body background="../img/search-background.jpeg">
+	
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#"><img src="../img/logo.jpg" width="134" height="50"/></a>
+			</div>	
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		</div>
+	</nav>
+	   <div class="main-container">
+	   <div class = 'row'>
+		   <div class = 'col-lg-7'>
+				<div class = 'seat-map-container'>
+					<div id="seat-map" >
+						<div class="front">SCREEN</div>					
+					</div>
+				</div>
+		   </div>
+   		   <div class = 'col-lg-5'>
+				<div class = 'booking-details-container'>
+					<div class="booking-details">
+						<p>Movie: <span> Gingerclown</span></p>
+						<p>Time: <span>November 3, 21:00</span></p>
+						<p>Seat: </p>
+						<ul id="selected-seats"></ul>
+						<p>Tickets: <span id="counter">0</span></p>
+						<p>Total: <b>$<span id="total">0</span></b></p>
+						<button class="checkout-button">BUY</button>	
+						<!--<button class="checkout-button" onclick=redirect()>BUY</button>-->
+						
+						<div id="legend"></div>
+					</div>
+				</div>
+		   </div>
+	   </div>
+		
+		
+		<div style="clear:both"></div>
+   </div>
+	</body>
+</html>
